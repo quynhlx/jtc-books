@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    background-color: antiquewhite;
+}
+
+header {
+    display: flex;  
+}
+.menu { 
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+ul > li {
+    display: inline-block;
+    padding: 1rem 2rem;
+}

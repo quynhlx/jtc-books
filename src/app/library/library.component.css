@@ -1,0 +1,18 @@
+
+
+.book {
+    width: 200px;
+    display: inline-block;
+}
+
+.book > img {
+    width: 100%;
+}
+.book > h3 {
+    text-align: center;
+}
+
+.no-content {
+    text-align: center;
+    padding: 2rem;
+}

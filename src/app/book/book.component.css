@@ -1,0 +1,11 @@
+.book {
+    width: 200px;
+    background-color: red;
+}
+
+.book > img {
+    width: 100%;
+}
+.book > h3 {
+    text-align: center;
+}

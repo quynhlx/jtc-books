@@ -1,0 +1,10 @@
+<div class="bookshelf">
+  <div class="book" *ngFor="let book of books">
+    <img src="{{book.cover}}" alt="">
+    <h3>{{book.title}}</h3>
+  </div>
+
+  <div *ngIf="books.length === 0" class="no-content">
+    No book in the bookshelf
+  </div>
+</div>
