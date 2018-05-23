@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+	padding: 0;
+	margin: 0;
+}
+body,html{
+	height: 100%;
+	width: 100%;
+}
+.box.list img{
+	max-height: 400px;
+	width: 97%;
+}
+.box.list .img-container {
+    display: flex;
+    width: 40%!important;
+    justify-content: space-around;
+}
+.box.list .book-details {
+    width: 60%;
+    height: 50%;
+}
+.box.list h1 {
+	font-size: 3rem!important;
+	color: #009245;
+}
+@media only screen and (max-width: 1490px) {
+    .box {
+        margin:0px 3% 30px 3% !important;
+    }
+}

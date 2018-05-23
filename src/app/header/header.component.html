@@ -1,0 +1,21 @@
+ <div class="logo-section">
+    <img src="assets/logo.png">
+  </div>
+<div class="info-section">
+  <div class="menu-section">
+    <ul>
+      <li><a href="#">E-BOOKS</a></li>
+      <li><a href="#">CLASS</a></li>
+    </ul>
+  </div>
+  <div class="account-section"> 
+    <ul>
+      <li><a href="#">LOGIN</a></li>
+      <li><a href="#">LOGOUT</a></li>
+    </ul>
+  </div>
+  <div [ngClass]="['search-section',showInput? 'active' : '']">
+    <img src="assets/search-icon.png" (click) = "showInput = !showInput">
+    <input type="text" id="search" name="search-input" placeholder="Tìm gì đó....">
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+  <h1>POPULAR E-BOOKS</h1>  
+  <div class="display-options">
+    <div class="find">
+      <img src='assets/search-icon.png'>
+      <input [(ngModel)] = "filterBook" name="search-input" placeholder="Tìm sách theo tên sách ..."/>
+    </div>
+    <div class="options">
+      <div class="list list-th {{ changed? '' : 'active' }}">
+        <img src="assets/list-menu.png" (click)="changeListView(false);"/>
+      </div>
+      <div class="list list-th2 {{ changed? 'active' : '' }}" (click)="changeListView(true);">
+        <img src="assets/list-menu2.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="list-books">
+  <div [ngClass]="['box',isViewList? 'list' : '']" *ngFor="let book of books | filter : filterBook">
+    <app-book [book] = "book"></app-book>
+  </div>    
+</div>
