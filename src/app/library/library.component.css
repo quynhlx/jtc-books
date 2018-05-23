@@ -3,6 +3,9 @@
 .book {
     width: 200px;
     display: inline-block;
+    text-align: center;
+    padding: 0.5rem;
+
 }
 
 .book > img {
@@ -10,6 +13,8 @@
 }
 .book > h3 {
     text-align: center;
+}
+.book button {
 }
 
 .no-content {

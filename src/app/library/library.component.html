@@ -1,9 +1,11 @@
 <div class="bookshelf">
   <div class="book" *ngFor="let book of books">
-    <img src="{{book.cover}}" alt="">
-    <h3>{{book.title}}</h3>
+    <img [src]="book.cover" [alt]="book.title">
+    <h3>{{book.title | lowercase}}</h3>
+    <p>{{book.publishDate | date:'yy, MMMM dd hh:mm:ss'}}</p>
+    <p>{{book.price | currency:'VND':true}}</p>
+    <button (click)="selectBook(book)">Download</button>
   </div>
-
   <div *ngIf="books.length === 0" class="no-content">
     No book in the bookshelf
   </div>

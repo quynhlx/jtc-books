@@ -1,0 +1,13 @@
+:host {
+    display: block;
+}
+
+input {
+    padding: 8px;
+    min-width: 300px;
+}
+
+button {
+    margin-left: 8px;
+    padding: 8px;
+}

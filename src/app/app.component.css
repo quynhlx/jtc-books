@@ -2,3 +2,7 @@
     display: block;
     background-color:burlywood;
 }
+
+app-search {
+    margin: 1rem;
+}
