@@ -1,4 +1,4 @@
-
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 @import url('https://fonts.googleapis.com/css?family=Anton|Roboto+Slab');
 :host{
     width: 100%;
@@ -10,32 +10,121 @@
     .img-container {
         width: 100%;
         max-height: 100%;
-        transition: 0.5s;
+        transition: 0.1s;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
         img {
             max-width: 100%;
-            transition: 0.5s;
+            opacity:1;
+            transition: 0.35s;
+        }
+        .icon-container{
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            position: absolute;
+            a{          
+                color: #ffffff;
+                visibility: hidden;
+                i{              
+                    font-size: 4em;
+                    opacity: 1;
+                    top: 50%;
+                    position: relative;
+                    -webkit-transform: translate3d(0, -50%, 0);
+                    transform: translate3d(0, -50%, 0);
+                    -webkit-transition-delay: 0s;
+                    transition-delay: 0s;
+                    display: inline-block;
+                }
+                i.left-icon{                                      
+                    -webkit-transform: translate3d(0, -50%, 0);
+                    transform: translate3d(0, -50%, 0);
+                }
+                i.right-icon{                                      
+                    -webkit-transform: translate3d(0, -50%, 0);
+                     transform: translate3d(0, -50%, 0);
+                }
+            }
+        }
+        .icon-container::before{
+            position: absolute;
+            top: 30px;
+            right: 50%;
+            bottom: 30px;
+            left: 50%;
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+            border-right: 1px solid rgba(255, 255, 255, 0.8);
+            content: '';
+            opacity: 0;
+            background-color: #ffffff;
+            -webkit-transition: all 0.4s;
+            transition: all 0.4s;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
         }
     }
-    h1 {
-        font-family: 'Roboto Slab', serif;
-        font-weight: normal;
-        font-size: 20px;
-        width: 100%;
-        transition: 0.5s;
+    .img-container:hover{ 
+        img{
+            opacity: 0.35;
+        }
+        .icon-container {
+            a{
+                visibility: visible;
+            }
+            i{
+                opacity: 1!important;
+                -webkit-transition: 0.3s ease-in-out!important;
+                transition: 0.3s ease-in-out!important;
+                -webkit-transition-delay: 0.3s!important;
+                transition-delay: 0.3s!important;
+            }
+            i.left-icon{         
+                -webkit-transform: translate3d(-25%, -50%, 0)!important;
+                transform: translate3d(-25%, -50%, 0)!important;
+            }
+            i.right-icon{         
+                -webkit-transform: translate3d(25%, -50%, 0)!important;
+                transform: translate3d(25%, -50%, 0)!important;
+            }
+        }
+        .icon-container::before{
+            background: rgba(255, 255, 255, 0);
+            left: 30px;
+            right: 30px;
+            opacity: 1;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
     }
-    a{
-        text-decoration: none;
-        color: #333;
-        display: inline-block;
-        background: #fff;
-        padding: 10px 25px;
-        text-transform: uppercase;
-        border-radius: 20px;
-        font-weight: bold;
-        font-family: Roboto;
-        align-self: center;
-        margin-top: 40px;
-        box-shadow: 1px 3px 9px 0 rgba(0,0,0,.2);
-        transition: 0.5s;
+    .book-details{    
+        h1 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: normal;
+            font-size: 20px;
+            width: 100%;
+            transition: 0.1s;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            background: #777676;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: 'Noto Sans', sans-serif;
+            align-self: center;
+            margin-top: 40px;
+            box-shadow: 1px 3px 9px 0 rgba(0,0,0,.2);
+            transition: 0.2s;
+        }
+        a:hover{
+            background: #333;
+        }
     }
 }

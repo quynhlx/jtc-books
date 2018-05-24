@@ -6,8 +6,8 @@
       <input [(ngModel)] = "filterBook" name="search-input" placeholder="Tìm sách theo tên sách ..."/>
     </div>
     <div class="options">
-      <div class="list list-th {{ changed? '' : 'active' }}">
-        <img src="assets/list-menu.png" (click)="changeListView(false);"/>
+      <div class="list list-th {{ changed? '' : 'active' }}" (click)="changeListView(false);">
+        <img src="assets/list-menu.png"/>
       </div>
       <div class="list list-th2 {{ changed? 'active' : '' }}" (click)="changeListView(true);">
         <img src="assets/list-menu2.png"/>

@@ -25,6 +25,6 @@ export class ContentComponent implements OnInit {
   filterBook:string = "";
   changeListView(b:boolean){
     this.isViewList = b;
-    this.changed = !this.changed;
+    this.changed = b;
   }
 }
