@@ -1,5 +1,5 @@
 <div class="container">
   <app-header></app-header>
-  <app-search></app-search>
-  <app-library></app-library>
+  <app-search [keyword]="keyword" (changeKeyword)="change($event)" ></app-search>
+  <app-library [keyword]="keyword"></app-library>
 </div>

@@ -1,5 +1,8 @@
 
-
+:host {
+    background-color: red;
+    display: block;
+}
 .book {
     width: 200px;
     display: inline-block;

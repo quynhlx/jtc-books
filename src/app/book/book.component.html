@@ -1,4 +1,8 @@
 <div class="book">
-  <img src="assets/book-cover-1.png" alt="">
-  <h3>Lap trinh C++</h3>
+  <img [src]="book.cover" [alt]="book.title">
+  <h3>{{book.title | lowercase}}</h3>
+  <p>{{book.publishDate | date:'yy, MMMM dd hh:mm:ss'}}</p>
+  <p>{{book.price | currency:'VND':true}}</p>
+  <p>{{book.instock | instock}}</p>
+  <button (click)="selectBook(book)">Download</button>
 </div>

@@ -1,3 +1,5 @@
+import { BookFilterPipe } from './pipes/bookfilter.pipe';
+import { InStockPipe } from './pipes/instock.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,6 +16,8 @@ import { SearchComponent } from './search/search.component';
     LibraryComponent,
     BookComponent,
     SearchComponent,
+    InStockPipe,
+    BookFilterPipe
   ],
   imports: [
     BrowserModule,

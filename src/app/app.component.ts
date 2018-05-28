@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Janeto';
+  keyword = '';
+
+  change(keyword) {
+    this.keyword = keyword;
+  }
 }

@@ -1,12 +1,11 @@
 <div class="bookshelf">
-  <div class="book" *ngFor="let book of books">
-    <img [src]="book.cover" [alt]="book.title">
-    <h3>{{book.title | lowercase}}</h3>
-    <p>{{book.publishDate | date:'yy, MMMM dd hh:mm:ss'}}</p>
-    <p>{{book.price | currency:'VND':true}}</p>
-    <button (click)="selectBook(book)">Download</button>
+  <h1> Ban Go chon: {{keyword}}</h1> 
+  <div class="book" *ngFor="let book of books | bookfilter:'angular'">
+    <app-book [book]="book" (select)="selectBook($event)"></app-book>
   </div>
   <div *ngIf="books.length === 0" class="no-content">
     No book in the bookshelf
   </div>
+<button (click)="removeBook()">Remove book</button>
 </div>
+
