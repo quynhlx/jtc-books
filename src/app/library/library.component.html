@@ -1,6 +1,6 @@
 <div class="bookshelf">
-  <h1> Ban Go chon: {{keyword}}</h1> 
-  <div class="book" *ngFor="let book of books | bookfilter:'angular'">
+  <h1> Dang download sach: {{selectedBook?.title}}</h1> 
+  <div class="book" *ngFor="let book of books | bookfilter: keyword">
     <app-book [book]="book" (select)="selectBook($event)"></app-book>
   </div>
   <div *ngIf="books.length === 0" class="no-content">

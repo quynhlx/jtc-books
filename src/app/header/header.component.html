@@ -7,7 +7,8 @@
         <li class="nav-menu">Home</li>
         <li class="nav-menu">Library</li>
         <li class="nav-menu">Collection</li>
-        <li class="nav-menu">Profile</li>
+        <li class="nav-menu" *ngIf="user?.username">{{user?.username}}</li>
+        <li class="nav-menu" *ngIf="!user?.username"><button (click)="openDialog()">Login</button></li>
       </ul>
     </div>
 </header>
