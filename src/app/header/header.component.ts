@@ -1,3 +1,4 @@
+import { BookService } from './../services/book.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  showInput:boolean = false;
-  constructor() { }
+  keyword: String = '';
+  showInput: Boolean = false;
+  constructor(private bookService: BookService) { }
 
   ngOnInit() {
   }
 
+  search(keyword: string) {
+     this.bookService.searchBooks(keyword);
+  }
 }

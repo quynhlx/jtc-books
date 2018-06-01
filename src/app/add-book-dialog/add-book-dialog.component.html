@@ -1,0 +1,18 @@
+<div class="form-container">
+  <h3>Add Book</h3>
+  <mat-form-field>
+    <input matInput placeholder='Title' [(ngModel)]="book.title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Link" [(ngModel)]="book.link">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Cover" [(ngModel)]="book.cover">
+  </mat-form-field>
+  <button mat-button (click)="addBook(book)">
+      Add
+    </button>
+</div>
+

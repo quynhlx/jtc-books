@@ -16,6 +16,6 @@
   </div>
   <div [ngClass]="['search-section',showInput? 'active' : '']">
     <img src="assets/search-icon.png" (click) = "showInput = !showInput">
-    <input type="text" id="search" name="search-input" placeholder="Tìm gì đó....">
+    <input type="text" id="search" name="search-input" [(ngModel)]="keyword" (change)="search(keyword)" placeholder="Tìm gì đó....">
   </div>
 </div>

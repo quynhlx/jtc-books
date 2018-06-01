@@ -1,0 +1,16 @@
+{
+  "books": [
+    {
+      "cover": "https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png",
+      "link": "abc",
+      "title": "FRED",
+      "id": "2249a564-daac-4f7c-9c7a-4479ffe758a2"
+    },
+    {
+      "cover": "https://spark.adobe.com/images/landing/examples/how-to-book-cover.jpg",
+      "link": "Janeto",
+      "title": "Dutch",
+      "id": "19fcf821-fd75-46c1-bc0c-86cb1b31c61f"
+    }
+  ]
+}

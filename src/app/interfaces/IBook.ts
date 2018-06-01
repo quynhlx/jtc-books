@@ -1,5 +1,6 @@
-export interface IBook{
-    cover:string;
-    title:string;
-    link:string;
+export interface IBook {
+    id?: string;
+    cover: string;
+    title: string;
+    link: string;
 }
