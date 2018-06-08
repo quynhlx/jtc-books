@@ -1,5 +1,11 @@
 .book {
-    width: 200px;
+    background-color: rgba(216, 216, 216, 0.5);
+    padding: 1rem;
+    display: block;
+}
+
+:host {
+    display: block;
 }
 
 .book > img {
@@ -7,4 +13,14 @@
 }
 .book > h3 {
     text-align: center;
+}
+
+.book button {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -12,7 +12,8 @@ import { BookComponent } from './book/book.component';
 import { SearchComponent } from './search/search.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AddBookComponent } from './add-book/add-book.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +23,15 @@ import {MatDialogModule} from '@angular/material/dialog';
     SearchComponent,
     InStockPipe,
     BookFilterPipe,
-    LoginDialogComponent
+    LoginDialogComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   entryComponents: [
     LoginDialogComponent

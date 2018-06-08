@@ -9,7 +9,7 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 })
 export class LibraryComponent implements OnInit, OnChanges {
 
-  books: IBook[] =  [];
+  @Input() books: IBook[];
   originBooks: IBook[] = [];
 
   selectedBook: IBook;
@@ -18,11 +18,12 @@ export class LibraryComponent implements OnInit, OnChanges {
   constructor(private bookService: BookService) { }
 
   ngOnInit() {
-    this.books = this.bookService.getBooks();
+    this.bookService.getBooks().subscribe(books => {
+      this.books = books as IBook[];
+    });
   }
 
   ngOnChanges() {
-    // this.searchBook(this.keyword);
   }
 
   selectBook(book: IBook) {

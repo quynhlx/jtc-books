@@ -1,11 +1,11 @@
+<div>
+  <h3>POPULAR E-BOOKS</h3>
+</div>
 <div class="bookshelf">
-  <h1> Dang download sach: {{selectedBook?.title}}</h1> 
-  <div class="book" *ngFor="let book of books | bookfilter: keyword">
+  <div class="book" *ngFor="let book of books">
     <app-book [book]="book" (select)="selectBook($event)"></app-book>
   </div>
-  <div *ngIf="books.length === 0" class="no-content">
+  <div *ngIf="books?.length === 0" class="no-content">
     No book in the bookshelf
   </div>
-<button (click)="removeBook()">Remove book</button>
 </div>
-

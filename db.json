@@ -1,0 +1,42 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "cover": "assets/book-cover-1.png",
+      "title": "Lap trinh C++ 2",
+      "price": 10000,
+      "instock": true
+    },
+    {
+      "id": 2,
+      "cover": "assets/book-cover-3.png",
+      "title": "Angular",
+      "price": 20000
+    },
+    {
+      "id": 3,
+      "cover": "assets/book-cover-5.png",
+      "title": "Nodejs",
+      "price": 30000
+    },
+    {
+      "id": 4,
+      "cover": "assets/book-cover-1.png",
+      "title": "Lap trinh C++ 2",
+      "price": 10000,
+      "instock": true
+    },
+    {
+      "id": 5,
+      "cover": "assets/book-cover-3.png",
+      "title": "Angular",
+      "price": 20000
+    },
+    {
+      "id": 6,
+      "cover": "assets/book-cover-5.png",
+      "title": "Nodejs",
+      "price": 30000
+    }
+  ]
+}

@@ -1,25 +1,18 @@
 
 :host {
-    background-color: red;
     display: block;
 }
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+}
 .book {
-    width: 200px;
-    display: inline-block;
+    width: calc((960px / 3) - 2rem);
     text-align: center;
     padding: 0.5rem;
-
+    margin-right: 1rem;
+    margin-bottom: 2rem;
 }
-
-.book > img {
-    width: 100%;
-}
-.book > h3 {
-    text-align: center;
-}
-.book button {
-}
-
 .no-content {
     text-align: center;
     padding: 2rem;
