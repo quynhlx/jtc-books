@@ -1,10 +1,15 @@
 <div class="header">
   <h3>POPULAR E-BOOKS</h3>
-  <app-search [keyword]="keyword" (keywordChange)="onSearch($event)"></app-search>
+  <div>
+    <app-search [keyword]="keyword" (keywordChange)="onSearch($event)"></app-search>
+    <button (click)="openAddBookDialog()" class="control">
+      <span class="fa fa-plus"></span>
+    </button>
+  </div>
 </div>
 <div class="bookshelf">
   <div class="book" *ngFor="let book of books">
-    <app-book [book]="book" (select)="selectBook($event)"></app-book>
+    <app-book [book]="book"></app-book>
   </div>
   <div *ngIf="books?.length === 0" class="no-content">
     No book in the bookshelf

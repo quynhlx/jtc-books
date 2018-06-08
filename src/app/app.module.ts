@@ -10,10 +10,15 @@ import { HeaderComponent, LoginDialogComponent } from './header/header.component
 import { LibraryComponent } from './library/library.component';
 import { BookComponent } from './book/book.component';
 import { SearchComponent } from './search/search.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { AddBookComponent } from './add-book/add-book.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import { EditBookComponent } from './edit-book/edit-book.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,17 +29,23 @@ import { AddBookComponent } from './add-book/add-book.component';
     InStockPipe,
     BookFilterPipe,
     LoginDialogComponent,
-    AddBookComponent
+    AddBookComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   entryComponents: [
-    LoginDialogComponent
+    LoginDialogComponent,
+    AddBookComponent,
+    EditBookComponent
   ],
   providers: [BookService, AuthService],
   bootstrap: [AppComponent]

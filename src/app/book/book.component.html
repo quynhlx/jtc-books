@@ -1,5 +1,9 @@
-<div class="book">
-  <img [src]="book.cover" [alt]="book.title">
+<div class="book"  (mouseleave)="hideBackdrop()">
+  <img [src]="book.cover" [alt]="book.title" (mouseenter)="showBackdrop()">
   <h3>{{book.title | uppercase}}</h3>
   <button (click)="download(book)">GET IT NOW</button>
+  <div *ngIf="isBackdrop" class="backdrop">
+    <button (click)="openEditBookDialog(book)"><span class="fa fa-edit"></span></button>
+    <button><span class="fa fa-remove"></span></button>
+  </div>
 </div>

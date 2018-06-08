@@ -1,14 +1,15 @@
+import { IBook } from 'src/app/interfaces/IBook';
 import { BookService } from './../services/book.service';
 import { Component, OnInit, Inject } from '@angular/core';
-import { IBook } from 'src/app/interfaces/IBook';
+import { AddBookComponent } from 'src/app/add-book/add-book.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-add-book',
-  templateUrl: './add-book.component.html',
-  styleUrls: ['./add-book.component.css']
+  selector: 'app-edit-book',
+  templateUrl: './edit-book.component.html',
+  styleUrls: ['./edit-book.component.css']
 })
-export class AddBookComponent implements OnInit {
+export class EditBookComponent implements OnInit {
 
   book: IBook = {
     cover: '',
@@ -27,9 +28,10 @@ export class AddBookComponent implements OnInit {
   ngOnInit() {
   }
 
-  addBook(book: IBook) {
-    this.bookService.createBook(book).subscribe(data => {
+  editBook(book: IBook) {
+    this.bookService.editBook(book).subscribe(data => {
       this.dialogRef.close(book);
     });
   }
+
 }

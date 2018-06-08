@@ -1,26 +1,44 @@
 .book {
-    background-color: rgba(216, 216, 216, 0.5);
-    padding: 1rem;
-    display: block;
+  background-color: rgba(216, 216, 216, 0.5);
+  padding: 1rem;
+  display: block;
 }
 
 :host {
-    display: block;
+  display: block;
+  position: relative;
 }
 
-.book > img {
-    width: 100%;
+.book>img {
+  width: 100%;
 }
-.book > h3 {
-    text-align: center;
+
+.book>h3 {
+  text-align: center;
 }
 
 .book button {
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
-    font-weight: bold;
-    cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.103);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop button {
+    margin: 1rem;
 }

@@ -21,4 +21,8 @@ export class BookService {
     removeBook(id: number) {
         return this.http.delete('http://localhost:3000/books/' + id);
     }
+
+    editBook(book: IBook) {
+        return this.http.put('http://localhost:3000/books/' + book.id, book);
+    }
 }
