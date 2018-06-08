@@ -27,11 +27,11 @@ button {
     box-shadow: 4px 4px 4px rgba(51, 51, 51, 0.5);
     color: gray;
     font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 button span {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
 }
 
 button:focus {

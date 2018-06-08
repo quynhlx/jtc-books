@@ -23,3 +23,22 @@
     display: flex;
     justify-content: space-between;
 }
+
+.control {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 100%;
+    box-shadow: 4px 4px 4px rgba(51, 51, 51, 0.5);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: gray;
+    margin-left: 1rem;
+}
+
+button span {
+    width: 1.5rem;
+}
+button:focus {
+    outline: none;
+    color: black;
+}

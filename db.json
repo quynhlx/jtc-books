@@ -37,6 +37,22 @@
       "cover": "assets/book-cover-5.png",
       "title": "Nodejs",
       "price": 30000
+    },
+    {
+      "cover": "https://about.canva.com/wp-content/uploads/sites/3/2015/01/children_bookcover.png",
+      "id": 1528459870139,
+      "instock": true,
+      "price": "100",
+      "publishDate": "2018-06-08T12:10:31.719Z",
+      "title": "Janeto"
+    },
+    {
+      "cover": "https://99designs-blog.imgix.net/wp-content/uploads/2017/12/attachment_83090027.jpg?auto=format&q=60&fit=max&w=930",
+      "id": 1528459916776,
+      "instock": true,
+      "price": "1000",
+      "publishDate": "2018-06-08T12:11:46.556Z",
+      "title": "Out of the Box"
     }
   ]
 }

@@ -1,6 +1,7 @@
 import { BookService } from './../services/book.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { IBook } from 'src/app/interfaces/IBook';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-book',
@@ -17,14 +18,15 @@ export class AddBookComponent implements OnInit {
     publishDate: new Date(Date.now()),
     title: ''
   };
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, public dialogRef: MatDialogRef<AddBookComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
   }
 
   addBook(book: IBook) {
     this.bookService.createBook(book).subscribe(data => {
-      alert('Them sach thanh cong');
+      this.dialogRef.close(book);
     });
   }
 }

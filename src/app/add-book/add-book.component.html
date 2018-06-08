@@ -1,7 +1,15 @@
 <div>
-  <input type="text" [(ngModel)]="book.title" placeholder="Title of Book">
-  <input type="text" [(ngModel)]="book.cover" placeholder="Cover">
-  <input type="text" [(ngModel)]="book.price" placeholder="Price">
-
-  <button (click)="addBook(book)">Add</button>
+  <h3>Add Book</h3>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="book.title" placeholder="Title">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="book.cover" placeholder="Cover">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="book.price" placeholder="Price">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addBook(book)">Add</button>
 </div>
