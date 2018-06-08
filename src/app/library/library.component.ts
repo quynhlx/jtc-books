@@ -27,14 +27,6 @@ export class LibraryComponent implements OnInit, OnChanges {
   ngOnChanges() {
   }
 
-  selectBook(book: IBook) {
-    this.selectedBook = book;
-  }
-
-  removeBook() {
-    this.books.pop();
-  }
-
   onSearch(keyword: string) {
     this.books = this.originBooks.filter(book => book.title.toLowerCase().includes(keyword.toLowerCase()));
   }
