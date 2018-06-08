@@ -8,14 +8,20 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   @Input() keyword: String = '';
-  @Output() changeKeyword = new EventEmitter<String>();
+  @Output() keywordChange = new EventEmitter<String>();
+  activated: Boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
-  search() {
-    this.changeKeyword.emit(this.keyword);
+  onChange(key: String) {
+    this.keywordChange.emit(key);
+    console.log(key);
+
+    if (key === '') {
+      this.activated = false;
+    }
   }
 
 }

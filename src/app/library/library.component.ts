@@ -20,6 +20,7 @@ export class LibraryComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.bookService.getBooks().subscribe(books => {
       this.books = books as IBook[];
+      this.originBooks = books as IBook[];
     });
   }
 
@@ -34,7 +35,7 @@ export class LibraryComponent implements OnInit, OnChanges {
     this.books.pop();
   }
 
-  searchBook(keyword: string) {
+  onSearch(keyword: string) {
     this.books = this.originBooks.filter(book => book.title.toLowerCase().includes(keyword.toLowerCase()));
   }
 }

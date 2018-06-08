@@ -4,11 +4,13 @@
     </div>
     <div class="menu">
       <ul>
-        <li class="nav-menu">Home</li>
-        <li class="nav-menu">Library</li>
-        <li class="nav-menu">Collection</li>
+        <li class="nav-menu">Ebook</li>
+        <li class="nav-menu">Class</li>
+        <li class="nav-menu">|</li>
         <li class="nav-menu" *ngIf="user?.username">{{user?.username}}</li>
-        <li class="nav-menu" *ngIf="!user?.username"><button (click)="openDialog()">Login</button></li>
+        <li class="nav-menu" *ngIf="!user?.username" (click)="openDialog()">Login</li>
+        <li class="nav-menu">Sign up</li>
+        <li><app-search></app-search></li>
       </ul>
     </div>
 </header>

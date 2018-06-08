@@ -1,5 +1,6 @@
-<div>
+<div class="header">
   <h3>POPULAR E-BOOKS</h3>
+  <app-search [keyword]="keyword" (keywordChange)="onSearch($event)"></app-search>
 </div>
 <div class="bookshelf">
   <div class="book" *ngFor="let book of books">
