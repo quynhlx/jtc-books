@@ -29,9 +29,8 @@ export class EditBookComponent implements OnInit {
   }
 
   editBook(book: IBook) {
-    this.bookService.editBook(book).subscribe(data => {
-      this.dialogRef.close(book);
-    });
+    this.bookService.editBook(book);
+    this.dialogRef.close(book);
   }
 
 }

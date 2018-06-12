@@ -4,6 +4,7 @@ import { IBook } from './../interfaces/IBook';
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { MatDialog } from '@angular/material/dialog';
+import { RemoveBookComponent } from '../remove-book/remove-book.component';
 
 @Component({
   selector: 'app-book',
@@ -12,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class BookComponent implements OnInit, OnDestroy {
   @Input() book: IBook;
-  @Output() select = new EventEmitter<any>();
+  @Output() remove = new EventEmitter<any>();
   isBackdrop = false;
   constructor(private authService: AuthService,
     private bookService: BookService,
@@ -47,10 +48,14 @@ export class BookComponent implements OnInit, OnDestroy {
       height: '400px',
       data: editbook
     });
+  }
 
-    // dialogRef.afterClosed().subscribe(book => {
-    //   this.book = book;
-    // });
+  openRemoveBookDialog(removeBook: IBook) {
+    const dialogRef = this.dialog.open(RemoveBookComponent, {
+      width: '400px',
+      height: 'auto',
+      data: removeBook
+    });
   }
 
 }

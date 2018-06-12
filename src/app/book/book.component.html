@@ -4,6 +4,6 @@
   <button (click)="download(book)">GET IT NOW</button>
   <div *ngIf="isBackdrop" class="backdrop">
     <button (click)="openEditBookDialog(book)"><span class="fa fa-edit"></span></button>
-    <button><span class="fa fa-remove"></span></button>
+    <button (click)="openRemoveBookDialog(book)"><span class="fa fa-remove"></span></button>
   </div>
 </div>

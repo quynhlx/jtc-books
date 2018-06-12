@@ -21,10 +21,18 @@ export class LibraryComponent implements OnInit, OnChanges {
   constructor(private bookService: BookService, public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.bookService.getBooks().subscribe(books => {
-      this.books = books as IBook[];
-      this.originBooks = books as IBook[];
-    });
+    const observer = {
+      next: function (data) {
+        this.books = data;
+        this.originBooks = data;
+      }.bind(this),
+      error: function(err) {
+        console.log(err);
+      }.bind(this)
+    };
+    this.bookService.books.subscribe(observer);
+
+    this.bookService.getBooks();
   }
 
   ngOnChanges() {
@@ -40,10 +48,5 @@ export class LibraryComponent implements OnInit, OnChanges {
       height: '400px',
       data: this.books[0]
     });
-
-    dialogRef.afterClosed().subscribe(book => {
-      this.books.push(book);
-    });
-
   }
 }

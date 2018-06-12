@@ -28,8 +28,7 @@ export class AddBookComponent implements OnInit {
   }
 
   addBook(book: IBook) {
-    this.bookService.createBook(book).subscribe(data => {
-      this.dialogRef.close(book);
-    });
+    this.bookService.createBook(book);
+    this.dialogRef.close();
   }
 }

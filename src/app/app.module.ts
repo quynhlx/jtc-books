@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { EditBookComponent } from './edit-book/edit-book.component';
+import { RemoveBookComponent } from './remove-book/remove-book.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     BookFilterPipe,
     LoginDialogComponent,
     AddBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    RemoveBookComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { EditBookComponent } from './edit-book/edit-book.component';
   entryComponents: [
     LoginDialogComponent,
     AddBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    RemoveBookComponent
   ],
   providers: [BookService, AuthService],
   bootstrap: [AppComponent]
