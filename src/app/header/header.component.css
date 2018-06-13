@@ -22,3 +22,8 @@ ul > li {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.nav-menu {
+    outline: none;
+}
+

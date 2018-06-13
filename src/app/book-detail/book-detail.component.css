@@ -1,0 +1,16 @@
+.book-detail {
+    display: flex;
+}
+
+.cover {
+    flex: 1;
+    padding: 1rem;
+}
+
+.cover img {
+    width: 100%;
+}
+.detail {
+    padding: 1rem;
+    flex: 1;
+}

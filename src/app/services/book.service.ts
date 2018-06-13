@@ -19,6 +19,10 @@ export class BookService {
         });
     }
 
+    getBook(id: number) {
+        return this.http.get('http://localhost:3000/books/' +  id);
+    }
+
     createBook(book: IBook) {
         book.id = Date.now();
         return this.http.post('http://localhost:3000/books', book).subscribe(() => {

@@ -26,11 +26,16 @@ export class LibraryComponent implements OnInit, OnChanges {
         this.books = data;
         this.originBooks = data;
       }.bind(this),
-      error: function(err) {
+      error: function (err) {
         console.log(err);
       }.bind(this)
     };
-    this.bookService.books.subscribe(observer);
+    this.bookService.books.subscribe((data) => {
+      this.books = data;
+      this.originBooks = data;
+    }, (err) => {
+      console.log(err);
+    });
 
     this.bookService.getBooks();
   }

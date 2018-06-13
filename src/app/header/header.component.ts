@@ -1,3 +1,4 @@
+import { BookService } from './../services/book.service';
 import { IUSer } from './../interfaces/IUser';
 import { Component, OnInit, Inject } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
@@ -11,10 +12,17 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 export class HeaderComponent implements OnInit {
 
   user: IUSer;
-  constructor(private authService: AuthService, public dialog: MatDialog) { }
+  totalBook: number;
+  constructor(
+    private bookService: BookService,
+    private authService: AuthService,
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     this.user = this.authService.user;
+    this.bookService.books.subscribe((books) => {
+      this.totalBook = books.length;
+    });
   }
 
   changeName(name: string) {
@@ -57,7 +65,7 @@ export class LoginDialogComponent {
 
   login() {
     if (this.username && this.password) {
-      this.dialogRef.close({username: this.username, password: this.password});
+      this.dialogRef.close({ username: this.username, password: this.password });
     }
   }
 }

@@ -1,11 +1,12 @@
 <header>
-    <div class="logo">
+    <div class="logo" [routerLink]="['']">
       <img src="assets/logo.png" alt="">
     </div>
     <div class="menu">
       <ul>
-        <li class="nav-menu">Ebook</li>
-        <li class="nav-menu">Class</li>
+        <li>Total: {{totalBook}}</li>
+        <li [routerLink]="['']" class="nav-menu">Ebook</li>
+        <li [routerLink]="['class']" class="nav-menu">Class</li>
         <li class="nav-menu">|</li>
         <li class="nav-menu" *ngIf="user?.username">{{user?.username}}</li>
         <li class="nav-menu" *ngIf="!user?.username" (click)="openDialog()">Login</li>

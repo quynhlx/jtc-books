@@ -21,20 +21,6 @@
       "instock": true
     },
     {
-      "id": 1528723106771,
-      "cover": "assets/book-cover-1.png",
-      "title": "Lap trinh C23++",
-      "price": 10000,
-      "instock": true
-    },
-    {
-      "id": 1528723158572,
-      "cover": "assets/book-cover-1.png",
-      "title": "Lap trinh C20++",
-      "price": 10000,
-      "instock": true
-    },
-    {
       "id": 1528723253255,
       "cover": "assets/book-cover-2.png",
       "title": "Lap trinh C12++",

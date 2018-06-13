@@ -16,10 +16,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddBookComponent } from './add-book/add-book.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { RemoveBookComponent } from './remove-book/remove-book.component';
-
+import { JtcClassComponent } from './jtc-class/jtc-class.component';
+import { RouterModule } from '@angular/router';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ import { RemoveBookComponent } from './remove-book/remove-book.component';
     LoginDialogComponent,
     AddBookComponent,
     EditBookComponent,
-    RemoveBookComponent
+    RemoveBookComponent,
+    JtcClassComponent,
+    BookDetailComponent,
+    FileNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,17 @@ import { RemoveBookComponent } from './remove-book/remove-book.component';
     HttpClientModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot([{
+      path: '', component: LibraryComponent
+    },
+    {
+      path: 'book/:id', component: BookDetailComponent
+    }, {
+      path: 'class', component: JtcClassComponent
+    }, {
+      path: '**', component: FileNotFoundComponent
+    }])
   ],
   entryComponents: [
     LoginDialogComponent,
