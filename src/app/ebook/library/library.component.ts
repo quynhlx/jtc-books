@@ -1,9 +1,8 @@
 import { MatDialog } from '@angular/material/dialog';
 import { BookService } from './../services/book.service';
-import { IBook } from './../interfaces/IBook';
+import { IBook } from '../../interfaces/IBook';
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
-import { AddBookComponent } from 'src/app/add-book/add-book.component';
-import { EditBookComponent } from 'src/app/edit-book/edit-book.component';
+import { AddBookComponent } from '../add-book/add-book.component';
 
 @Component({
   selector: 'app-library',

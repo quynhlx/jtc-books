@@ -1,7 +1,7 @@
+import { AddBookComponent } from '../add-book/add-book.component';
 import { IBook } from 'src/app/interfaces/IBook';
 import { BookService } from './../services/book.service';
 import { Component, OnInit, Inject } from '@angular/core';
-import { AddBookComponent } from 'src/app/add-book/add-book.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({

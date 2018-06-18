@@ -1,5 +1,5 @@
-import { IBook } from './../interfaces/IBook';
 import { Pipe, PipeTransform } from '@angular/core';
+import { IBook } from '../../interfaces/IBook';
 
 @Pipe({
     name: 'bookfilter'

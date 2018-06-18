@@ -1,4 +1,4 @@
-import { BookService } from './../services/book.service';
+import { BookService } from '../ebook/services/book.service';
 import { IUSer } from './../interfaces/IUser';
 import { Component, OnInit, Inject } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
