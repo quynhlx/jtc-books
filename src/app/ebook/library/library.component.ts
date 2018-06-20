@@ -1,8 +1,8 @@
 import { MatDialog } from '@angular/material/dialog';
-import { BookService } from './../services/book.service';
 import { IBook } from '../../interfaces/IBook';
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { AddBookComponent } from '../add-book/add-book.component';
+import { BookService } from '../../shared';
 
 @Component({
   selector: 'app-library',
@@ -49,8 +49,7 @@ export class LibraryComponent implements OnInit, OnChanges {
   openAddBookDialog() {
     const dialogRef = this.dialog.open(AddBookComponent, {
       width: '400px',
-      height: '400px',
-      data: this.books[0]
+      height: '400px'
     });
   }
 }

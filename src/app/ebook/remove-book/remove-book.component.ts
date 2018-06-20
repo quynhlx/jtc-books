@@ -1,8 +1,8 @@
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AddBookComponent } from './../add-book/add-book.component';
-import { BookService } from './../services/book.service';
 import { IBook } from '../../interfaces/IBook';
 import { Component, OnInit, Inject } from '@angular/core';
+import { BookService } from '../../shared';
 
 @Component({
   selector: 'app-remove-book',

@@ -9,9 +9,8 @@
         <li [routerLink]="['class']" class="nav-menu">Class</li>
         <li class="nav-menu">|</li>
         <li class="nav-menu" *ngIf="user?.username">{{user?.username}}</li>
-        <li class="nav-menu" *ngIf="!user?.username" (click)="openDialog()">Login</li>
-        <li class="nav-menu">Sign up</li>
-        
+        <li class="nav-menu" *ngIf="!user?.username" [routerLink]="['/auth','login']">Login</li>
+        <li class="nav-menu" *ngIf="!user?.username" [routerLink]="['/auth','register']">Sign up</li>
       </ul>
     </div>
 </header>

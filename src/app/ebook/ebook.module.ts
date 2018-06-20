@@ -11,7 +11,6 @@ import { InStockPipe } from '../ebook/pipes/instock.pipe';
 import { AddBookComponent } from './add-book/add-book.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { RemoveBookComponent } from './remove-book/remove-book.component';
-import { BookService } from './services/book.service';
 import { EBookRoutingModule } from './ebook.routing';
 import { SearchComponent } from './search/search.component';
 import { CommonModule } from '@angular/common';
@@ -19,7 +18,13 @@ import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-    imports: [CommonModule, FormsModule, MatDialogModule, MatInputModule, MatFormFieldModule, MatButtonModule , EBookRoutingModule],
+    imports: [CommonModule,
+        FormsModule,
+        MatDialogModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        EBookRoutingModule],
     exports: [],
     declarations: [
         BookComponent,
@@ -39,4 +44,5 @@ import { FormsModule } from '@angular/forms';
         RemoveBookComponent
     ]
 })
-export class EBookModule { }
+export class EBookModule {
+}

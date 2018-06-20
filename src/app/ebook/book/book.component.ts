@@ -1,10 +1,10 @@
 import { EditBookComponent } from './../edit-book/edit-book.component';
-import { BookService } from './../services/book.service';
 import { IBook } from '../../interfaces/IBook';
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { RemoveBookComponent } from '../remove-book/remove-book.component';
+import { BookService } from '../../shared';
 
 @Component({
   selector: 'app-book',

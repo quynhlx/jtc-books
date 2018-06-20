@@ -6,7 +6,10 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'class', pathMatch: 'full'
+    path: '', redirectTo: 'library', pathMatch: 'full'
+  },
+  {
+    path: 'auth', loadChildren: '../app/auth/auth.module#AuthModule'
   },
   {
     path: 'library', loadChildren: '../app/ebook/ebook.module#EBookModule'
