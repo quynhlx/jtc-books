@@ -1,0 +1,12 @@
+:host {
+    display: block;
+}
+
+app-search {
+    margin: 1rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto; 
+}

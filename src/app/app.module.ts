@@ -13,11 +13,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { FileNotFoundComponent } from './file-not-found/file-not-found.component';
 import { AppRoutingModule } from './app.routing';
+import { LayoutComponent } from './layout/layout.component';
+import { AuthGuard } from './services/authGuard.service';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FileNotFoundComponent
+    FileNotFoundComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { AppRoutingModule } from './app.routing';
   ],
   entryComponents: [
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

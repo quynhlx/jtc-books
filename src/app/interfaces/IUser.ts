@@ -1,5 +1,5 @@
-export interface IUSer {
-    username: string;
-    password: string;
-    fullName: string;
+export interface IUser {
+    username?: string;
+    password?: string;
+    fullName?: string;
 }

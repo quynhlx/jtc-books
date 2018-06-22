@@ -1,8 +1,9 @@
-import { IUSer } from './../interfaces/IUser';
+import { IUser } from './../interfaces/IUser';
 import { Component, OnInit, Inject } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BookService } from '../shared';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ import { BookService } from '../shared';
 })
 export class HeaderComponent implements OnInit {
 
-  user: IUSer;
+  user:  Observable<IUser>;
   totalBook: number;
   constructor(
     private bookService: BookService,

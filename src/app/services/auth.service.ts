@@ -1,21 +1,30 @@
 import { Injectable } from '@angular/core';
-import { IUSer } from 'src/app/interfaces/IUser';
+import { IUser } from 'src/app/interfaces/IUser';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class AuthService {
 
-    user: IUSer;
+    private _user: BehaviorSubject<IUser> = new BehaviorSubject<IUser>({});
+
+    get user() {
+        return this._user.asObservable();
+    }
     constructor() {
-        this.user = {
-            fullName: '',
-            password: '',
-            username: ''
-        };
     }
 
     login(username: string, password: string) {
-        this.user.username = username;
-        this.user.password = password;
+        if (!username || !password) {
+            return;
+        }
+        const user = {
+            username: username,
+            password: password
+        };
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+
+        this._user.next(user);
     }
 }
 
