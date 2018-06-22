@@ -17,14 +17,14 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/demo'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/demo/index.html'));
+res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 80, ()=> {
-    console.log('server is runing on', 80);
+app.listen(process.env.PORT || 8080, ()=> {
+    console.log('server is runing on', 8080);
 });
