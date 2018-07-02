@@ -4,6 +4,7 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { AddBookComponent } from '../add-book/add-book.component';
 import { BookService } from '../../shared';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-library',
@@ -18,7 +19,10 @@ export class LibraryComponent implements OnInit, OnChanges {
   selectedBook: IBook;
   @Input() keyword = '';
 
-  constructor(private router: Router, private bookService: BookService, public dialog: MatDialog) { }
+  constructor(private router: Router,
+    private bookService: BookService,
+    public dialog: MatDialog,
+    private toastr: ToastrService) { }
 
   ngOnInit() {
     const observer = {

@@ -2,6 +2,7 @@ import { BookService } from './../../shared';
 import { Component, OnInit, Inject } from '@angular/core';
 import { IBook } from 'src/app/interfaces/IBook';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-book',
@@ -20,7 +21,8 @@ export class AddBookComponent implements OnInit {
   };
   constructor(private bookService: BookService,
     public dialogRef: MatDialogRef<AddBookComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private toastr: ToastrService) {
   }
 
   ngOnInit() {
@@ -28,6 +30,7 @@ export class AddBookComponent implements OnInit {
 
   addBook(book: IBook) {
     this.bookService.createBook(book);
+    this.toastr.success('Successfully', 'Add book');
     this.dialogRef.close();
   }
 }

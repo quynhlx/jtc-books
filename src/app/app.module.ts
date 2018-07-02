@@ -15,6 +15,7 @@ import { FileNotFoundComponent } from './file-not-found/file-not-found.component
 import { AppRoutingModule } from './app.routing';
 import { LayoutComponent } from './layout/layout.component';
 import { AuthGuard } from './services/authGuard.service';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { AuthGuard } from './services/authGuard.service';
     MatFormFieldModule,
     MatButtonModule,
     AppRoutingModule,
-    SharedModule.forRoot()
+    SharedModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   entryComponents: [
   ],
