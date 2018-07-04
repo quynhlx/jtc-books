@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { IBook } from '../../interfaces/IBook';
+import { map } from 'rxjs/operators';
 @Injectable()
 export class BookService {
 
@@ -13,16 +14,28 @@ export class BookService {
     constructor(private http: HttpClient) {
     }
 
-    getBooks() {
-        return this.http.get('/books').subscribe(books => {
-            this._books.next(books as IBook[]);
-        });
+    getBooks(pageSize: number = 6, page: number = 1): Observable<IBook[]>{
+        return this.http.get('/books').pipe(map(books => {
+            const pagination = this.paginate(books as IBook[], pageSize, page);
+            this._books.next(pagination);
+            return books as IBook[];
+        }));
     }
 
     getBook(id: number) {
         return this.http.get('/books/' + id);
     }
 
+    searchBooks(keyword: string): Observable<IBook[]> {
+        return this.http.get(`/books?q=${keyword}`).pipe(map(books => {
+            return books as IBook[];
+        }));
+    }
+
+    paginate(books: IBook[], pageSize: number, pageNumber: number): IBook[] {
+        --pageNumber;
+        return books.slice(pageNumber * pageSize, (pageNumber + 1) * pageSize);
+    }
     createBook(book: IBook) {
         book.id = Date.now();
         return this.http.post('/books', book).subscribe(() => {

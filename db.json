@@ -41,6 +41,46 @@
       "price": "124215",
       "publishDate": "2018-06-25T13:09:25.639Z",
       "title": "Fred"
+    },
+    {
+      "cover": "https://spark.adobe.com/images/landing/examples/how-to-book-cover.jpg",
+      "id": 1530703760473,
+      "instock": true,
+      "price": "20000",
+      "publishDate": "2018-07-04T11:29:03.549Z",
+      "title": "Dutch"
+    },
+    {
+      "cover": "https://99designs-blog.imgix.net/wp-content/uploads/2017/12/attachment_83090027.jpg?auto=format&q=60&fit=max&w=930",
+      "id": 1530703789202,
+      "instock": true,
+      "price": "2000",
+      "publishDate": "2018-07-04T11:29:40.572Z",
+      "title": "Out of the box"
+    },
+    {
+      "cover": "https://about.canva.com/wp-content/uploads/sites/3/2015/01/art_bookcover.png",
+      "id": 1530703825850,
+      "instock": true,
+      "price": 0,
+      "publishDate": "2018-07-04T11:30:17.476Z",
+      "title": "The World"
+    },
+    {
+      "cover": "https://marketplace.canva.com/MAB___U-clw/1/0/thumbnail_large/canva-yellow-lemon-children-book-cover-MAB___U-clw.jpg",
+      "id": 1530703857549,
+      "instock": true,
+      "price": 0,
+      "publishDate": "2018-07-04T11:30:33.941Z",
+      "title": "The Happy Lemon"
+    },
+    {
+      "cover": "https://marketplace.canva.com/MACXC0twKgo/1/0/thumbnail_large/canva-green-and-pink-science-fiction-book-cover-MACXC0twKgo.jpg",
+      "id": 1530703893851,
+      "instock": true,
+      "price": 0,
+      "publishDate": "2018-07-04T11:31:07.738Z",
+      "title": "The Live inside your head "
     }
   ]
 }

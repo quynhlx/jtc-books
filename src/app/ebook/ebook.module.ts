@@ -15,11 +15,13 @@ import { EBookRoutingModule } from './ebook.routing';
 import { SearchComponent } from './search/search.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
     imports: [CommonModule,
         FormsModule,
+        MatPaginatorModule,
         MatDialogModule,
         MatInputModule,
         MatFormFieldModule,

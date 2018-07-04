@@ -19,36 +19,40 @@ export class LibraryComponent implements OnInit, OnChanges {
   selectedBook: IBook;
   @Input() keyword = '';
 
+  page = 1;
+  length = 0;
+  pageSize = 6;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+
   constructor(private router: Router,
     private bookService: BookService,
-    public dialog: MatDialog,
-    private toastr: ToastrService) { }
+    public dialog: MatDialog) { }
 
   ngOnInit() {
-    const observer = {
-      next: function (data) {
-        this.books = data;
-        this.originBooks = data;
-      }.bind(this),
-      error: function (err) {
-        console.log(err);
-      }.bind(this)
-    };
     this.bookService.books.subscribe((data) => {
       this.books = data;
-      this.originBooks = data;
     }, (err) => {
       console.log(err);
     });
 
-    this.bookService.getBooks();
+    this.bookService.getBooks().subscribe(books => {
+      this.length = books.length;
+    });
   }
 
   ngOnChanges() {
   }
 
+  pageEvent(page) {
+    this.page = page.pageIndex + 1;
+    this.bookService.getBooks(this.pageSize, this.page).subscribe(books => {
+      this.length = books.length;
+    });
+  }
   onSearch(keyword: string) {
-    this.books = this.originBooks.filter(book => book.title.toLowerCase().includes(keyword.toLowerCase()));
+    this.bookService.searchBooks(keyword).subscribe(books => {
+      this.books = books;
+    });
   }
 
   openAddBookDialog() {
