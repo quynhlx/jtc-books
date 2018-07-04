@@ -26,4 +26,6 @@ ul > li {
 .nav-menu {
     outline: none;
 }
-
+.username {
+    margin-right: 1rem;
+}

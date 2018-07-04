@@ -12,9 +12,9 @@ export class ErrorInterceptor implements HttpInterceptor {
         return next.handle(req).pipe(map(event => {
             if (event instanceof HttpResponse) {
                 console.log(event);
-                if (event.status === 200) {
-                    this.toastr.success('Successfully', 'Get Data');
-                }
+                // if (event.status === 200) {
+                //     this.toastr.success('Successfully', 'Get Data');
+                // }
             }
             return event;
         }));

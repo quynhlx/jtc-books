@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app.routing';
 import { LayoutComponent } from './layout/layout.component';
 import { AuthGuard } from './services/authGuard.service';
 import { ToastrModule } from 'ngx-toastr';
+import { MatMenuModule } from '@angular/material/menu';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
   ],
   imports: [
     BrowserModule,
+    MatMenuModule,
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
